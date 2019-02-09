@@ -1,0 +1,7 @@
+{
+  "sleep_time": 60,
+  "server": "",
+  "device_id": 12345,
+  "min_distance": 10,
+  "logging": true
+}
