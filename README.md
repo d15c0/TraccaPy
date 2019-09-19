@@ -72,11 +72,11 @@ I am in no way affiliated with Traccar Ltd, this is a fan-made project.
 
 ### GPSD install
 
-sudo apt-get update
-sudo apt-get install gpsd gpsd-clients python-gps
-sudo systemctl stop gpsd.socket
-sudo systemctl disable gpsd.socket
-sudo dpkg-reconfigure gpsd
+sudo apt-get update  
+sudo apt-get install gpsd gpsd-clients python-gps  
+sudo systemctl stop gpsd.socket  
+sudo systemctl disable gpsd.socket  
+sudo dpkg-reconfigure gpsd  
 
-***edit /etc/default/gpsd***
+***edit /etc/default/gpsd***  
 sudo nano /etc/default/gpsd
