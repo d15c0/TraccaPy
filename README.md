@@ -11,6 +11,7 @@
 * [License](#license)
 * [Acknowledgements](#acknowledgements)
 * [Notice](#notice)
+* [GPSD install](#gpsd-install)
 
 ## Getting Started
 
@@ -31,9 +32,10 @@ I used [tPacketCapture](https://play.google.com/store/apps/details?id=jp.co.taos
 
 ### Installation
 1. Clone the repository: `git clone https://gitlab.com/LapinoLapidus/traccapy`.
+2. Install the dependencies `sudo pip3 install geopy requests gpsd-py3`.
 2. Rename `config-sample.json` to `config.json`.
 3. Modify the config.json file (see Configuration).
-4. Set up [gpsd](https://learn.adafruit.com/adafruit-ultimate-gps-hat-for-raspberry-pi/use-gpsd), I had to use /dev/serial0, since ttyAMA0 did not work.
+4. Set up [gpsd](https://learn.adafruit.com/adafruit-ultimate-gps-hat-for-raspberry-pi/use-gpsd), I used /dev/ttyS0
 5. Run the file, `python3 Main.py`.
 
 ### Configuration
@@ -67,3 +69,14 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ### Notice
 
 I am in no way affiliated with Traccar Ltd, this is a fan-made project.
+
+### GPSD install
+
+sudo apt-get update
+sudo apt-get install gpsd gpsd-clients python-gps
+sudo systemctl stop gpsd.socket
+sudo systemctl disable gpsd.socket
+sudo dpkg-reconfigure gpsd
+
+***edit /etc/default/gpsd***
+sudo nano /etc/default/gpsd
